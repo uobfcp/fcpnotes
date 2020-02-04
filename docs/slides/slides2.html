@@ -15,6 +15,71 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
   <link rel="stylesheet" href="css/style.css"/>
   <!-- Printing and PDF exports -->
@@ -39,15 +104,199 @@
   <p class="date">Week 14</p>
 </section>
 
-<section id="the-idea" class="slide level2">
-<h2>The idea</h2>
+<section id="today-week-14" class="slide level2">
+<h2>Today (week 14)</h2>
 <ul>
-<li>Build on the intro unit</li>
-<li>Reinforce basic programming</li>
-<li>Think about larger codebases</li>
-<li>Work collaboratively</li>
-<li>Use version control (git/github)</li>
+<li>Assignment up (deadline Tuesday week 16)</li>
+<li>Functions and exceptions</li>
+<li>Git and github</li>
 </ul>
+</section>
+<section id="assignment" class="slide level2">
+<h2>Assignment</h2>
+<ul>
+<li>25% of the unit mark</li>
+<li>Make a CLI Caesar cypher (not hard).</li>
+<li>Use the tests provided</li>
+<li>Get spec and code from Github Classroom</li>
+<li>Submission through Github Classroom</li>
+<li>Instructions in the worksheet on Friday</li>
+</ul>
+</section>
+<section id="functions-in-a-script" class="slide level2">
+<h2>Functions in a script</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># myscript.py</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">def</span> double(thing):</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    <span class="co">&quot;&quot;&quot;Doubles the thing&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">    <span class="cf">return</span> thing <span class="op">+</span> thing</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="bu">print</span>(double(<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="bu">print</span>(double([<span class="dv">1</span>, <span class="dv">2</span>]))</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="bu">print</span>(double(<span class="st">&quot;foo&quot;</span>))</a></code></pre></div>
+<p>Run in the terminal:</p>
+<pre class="shell"><code>$ python myscript.py
+4
+[1, 2, 1, 2]
+&#39;foofoo&#39;</code></pre>
+</section>
+<section id="why-functions" class="slide level2">
+<h2>Why functions</h2>
+<ul>
+<li>Break up code into small pieces</li>
+<li>Good function names improve readability</li>
+<li>Reuse code</li>
+<li>Don’t repeat yourself (DRY)</li>
+<li>One place to fix bugs</li>
+</ul>
+</section>
+<section id="functions-in-a-module" class="slide level2">
+<h2>Functions in a module</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># myscript.py</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">def</span> double(thing):</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">    <span class="co">&quot;&quot;&quot;Doubles the thing&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">    <span class="cf">return</span> thing <span class="op">+</span> thing</a></code></pre></div>
+<p>Run in the <em>Python</em> shell:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> myscript <span class="im">import</span> double</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> double(<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="dv">8</span></a></code></pre></div>
+</section>
+<section id="function-execution" class="slide level2">
+<h2>Function execution</h2>
+<p>DEMO…</p>
+</section>
+<section id="good-names" class="slide level2">
+<h2>Good names</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># Call func1</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">var1 <span class="op">=</span> func1(var2)</a></code></pre></div>
+<p>VS</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># All components are equally weighted</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">unit_mark <span class="op">=</span> mean(component_marks)</a></code></pre></div>
+<ul>
+<li>Variable and function names can explain code</li>
+<li>Comments should explain non-obvious things</li>
+</ul>
+</section>
+<section id="raising-exceptions" class="slide level2">
+<h2>Raising exceptions</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">def</span> get_first_name(student_number):</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">    <span class="co">&quot;&quot;&quot;Return first name of the student with this student number&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">    <span class="cf">if</span> student_number <span class="kw">not</span> <span class="kw">in</span> registered_students:</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;No such student registered </span><span class="sc">%s</span><span class="st">&quot;</span> <span class="op">%</span> student_number)</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">    details <span class="op">=</span> registered_students[student_number]</a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">    <span class="cf">return</span> details[<span class="st">&#39;firstname&#39;</span>]</a></code></pre></div>
+<p>Use exceptions when it is not possible to return something sensible</p>
+</section>
+<section id="seeing-exceptions" class="slide level2">
+<h2>Seeing Exceptions</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> x.upper()</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">Traceback (most recent call last):</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="pp">AttributeError</span>: <span class="st">&#39;int&#39;</span> <span class="bu">object</span> has no attribute <span class="st">&#39;upper&#39;</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> <span class="op">+</span> [<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">Traceback (most recent call last):</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="pp">TypeError</span>: unsupported operand <span class="bu">type</span>(s) <span class="cf">for</span> <span class="op">+</span>: <span class="st">&#39;int&#39;</span> <span class="kw">and</span> <span class="st">&#39;list&#39;</span></a></code></pre></div>
+</section>
+<section id="traceback" class="slide level2">
+<h2>Traceback</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> subprocess</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> subprocess.run(<span class="st">&#39;foo&#39;</span>)</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">Traceback (most recent call last):</a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">  File <span class="st">&quot;.../lib/python3.8/subprocess.py&quot;</span>, line <span class="dv">489</span>, <span class="kw">in</span> run</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">    <span class="cf">with</span> Popen(<span class="op">*</span>popenargs, <span class="op">**</span>kwargs) <span class="im">as</span> process:</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">  File <span class="st">&quot;.../lib/python3.8/subprocess.py&quot;</span>, line <span class="dv">854</span>, <span class="kw">in</span> <span class="fu">__init__</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">    <span class="va">self</span>._execute_child(args, executable, preexec_fn, close_fds,</a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">  File <span class="st">&quot;.../lib/python3.8/subprocess.py&quot;</span>, line <span class="dv">1702</span>, <span class="kw">in</span> _execute_child</a>
+<a class="sourceLine" id="cb9-10" data-line-number="10">    <span class="cf">raise</span> child_exception_type(errno_num, err_msg, err_filename)</a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="pp">FileNotFoundError</span>: [Errno <span class="dv">2</span>] No such <span class="bu">file</span> <span class="kw">or</span> directory: <span class="st">&#39;foo&#39;</span></a></code></pre></div>
+</section>
+<section id="traceback-demo" class="slide level2">
+<h2>Traceback demo</h2>
+<p>Demo…</p>
+<p>Make sure you read the traceback!</p>
+</section>
+<section id="catching-exceptions" class="slide level2">
+<h2>Catching exceptions</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" data-line-number="1">number_string <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Please enter a number: &quot;</span>)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="cf">try</span>:</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3">    number <span class="op">=</span> <span class="bu">int</span>(number_string)</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="cf">except</span> <span class="pp">ValueError</span>:</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">    <span class="bu">print</span>(<span class="st">&quot;Not a valid number. Found &#39;</span><span class="sc">%s</span><span class="st">&#39;&quot;</span> number_string)</a></code></pre></div>
+<ul>
+<li>Catch exception to handle failure (if expected!)</li>
+<li>Usually best not to catch the exception</li>
+<li>Catch <em>only</em> the exception you expect</li>
+</ul>
+</section>
+<section id="git" class="slide level2">
+<h2>Git</h2>
+<ul>
+<li>Version constrol system</li>
+<li>Useful for collaborating on large codebases</li>
+<li>Originally for Linux code (30 million lines)</li>
+<li>Created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a></li>
+<li><a href="http://lkml.iu.edu/hypermail/linux/kernel/1707.3/02367.html">Rant</a></li>
+</ul>
+</section>
+<section id="start-a-git-project" class="slide level2">
+<h2>Start a git project</h2>
+<ul>
+<li>Create repo on Github</li>
+<li>Clone the repo</li>
+</ul>
+<pre class="shell"><code>$ git clone https://github.com/myname/myrepo.git
+$ cd myrepo
+$ git status</code></pre>
+</section>
+<section id="change-the-code" class="slide level2">
+<h2>Change the code</h2>
+<pre><code>$ git status       # Check all clean
+$ gedit README.md  # Make changes and save
+$ git status       # Shows changed files
+$ git diff         # Shows the changes</code></pre>
+<pre><code>diff --git a/t.py b/t.py
+index c5d61cf..fbcc63c 100644
+--- a/t.py
++++ b/t.py
+@@ -1,7 +1,7 @@
+ def myfunction(x):
+     y = 2
+     z = 3
+-    return y + z - x
++    return [y + z - x]
+
+ # here is some code</code></pre>
+</section>
+<section id="commit-the-changes" class="slide level2">
+<h2>Commit the changes</h2>
+<pre class="shell"><code>$ git status
+$ git diff
+$ git add README.md   # Tell git you want to commit
+$ git commit -m &quot;Add installation instructions in README&quot;</code></pre>
+</section>
+<section id="committing" class="slide level2">
+<h2>Committing</h2>
+<ul>
+<li>Always check (<code>status/diff</code>) before committing.</li>
+<li>Git saves the commit as a “version” of your code.</li>
+<li>Can make more changes and commits after</li>
+</ul>
+</section>
+<section id="pushpull" class="slide level2">
+<h2>Push/pull</h2>
+<ul>
+<li>Git stores commits in the <code>.git</code> folder.</li>
+<li>Use push to send them to github</li>
+</ul>
+<pre><code>$ git status   # Always check clean first
+$ git push</code></pre>
+<p>Use <code>git pull</code> to get changes <em>from</em> github.</p>
 </section>
     </div>
   </div>
