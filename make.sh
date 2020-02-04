@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
 # Source and output folders
-SRC=src
-OUT=docs
+SRC=src/slides
+OUT=docs/slides
 
 # Pages to build
 PAGES=$SRC/*.md
-SLIDES=$SRC/slides/*.md
 
 CSS=css/style.css
 
@@ -26,6 +25,7 @@ for mdfile in $PAGES; do
     --css $CSS \
     --title-prefix "$TITLE" \
     --variable title:"$TITLE"\
+    -t revealjs \
     -o $htmlfile $mdfile
 
 done
