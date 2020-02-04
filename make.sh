@@ -8,6 +8,8 @@ OUT=html
 PAGES=$SRC/*.md
 SLIDES=$SRC/slides/*.md
 
+CSS=css/style.css
+
 # Names of css and template files
 TITLE="EMAT10006 - Further Computer Programming"
 CSSFILE=style.css
@@ -21,6 +23,7 @@ for mdfile in $PAGES; do
 
   # Pandoc command:
   pandoc -s \
+    --css $CSS \
     --title-prefix "$TITLE" \
     --variable title:"$TITLE"\
     -o $htmlfile $mdfile
