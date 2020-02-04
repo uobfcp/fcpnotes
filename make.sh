@@ -2,7 +2,7 @@
 
 # Source and output folders
 SRC=src
-OUT=html
+OUT=docs
 
 # Pages to build
 PAGES=$SRC/*.md
