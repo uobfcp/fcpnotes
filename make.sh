@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Source and output folders
-SRC=.
-OUT=.
+SRC=src
+OUT=html
 
 # Pages to build
 PAGES=$SRC/*.md
