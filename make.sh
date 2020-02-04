@@ -6,6 +6,7 @@ OUT=html
 
 # Pages to build
 PAGES=$SRC/*.md
+SLIDES=$SRC/slides/*.md
 
 # Names of css and template files
 TITLE="EMAT10006 - Further Computer Programming"
@@ -19,6 +20,9 @@ for mdfile in $PAGES; do
   echo Compiling $mdfile  to  $htmlfile  ...
 
   # Pandoc command:
-  pandoc -s -t revealjs -o $htmlfile $mdfile
+  pandoc -s \
+    --title-prefix "$TITLE" \
+    --variable title:"$TITLE"\
+    -o $htmlfile $mdfile
 
 done
