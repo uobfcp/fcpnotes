@@ -16,6 +16,8 @@ Go over the basics of Python in the [official tutorial](https://docs.python.org/
 
 Look up particular Python modules from the stdlib in the [official documentation](https://docs.python.org/3/library/index.html)
 
+Look up terminal commands in the [cheat sheet](shell.html)
+
 
 ## Slides:
 
