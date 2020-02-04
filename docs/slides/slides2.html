@@ -289,6 +289,12 @@ $ git diff
 $ git add README.md   # Tell git you want to commit
 $ git commit -m &quot;Add installation instructions in README&quot;</code></pre>
 </section>
+<section id="commit-history" class="slide level2">
+<h2>Commit history</h2>
+<p>Commits represent the history of your work</p>
+<pre><code>          initial commit -- A -- B -- C -- HEAD</code></pre>
+<p>Use <code>git log</code> to see the history (or look on github)</p>
+</section>
 <section id="committing" class="slide level2">
 <h2>Committing</h2>
 <ul>
@@ -310,6 +316,15 @@ $ git push</code></pre>
 <p>Get changes <em>from</em> github:</p>
 <pre><code>$ git pull</code></pre>
 </section>
+<section id="pushpull-1" class="slide level2">
+<h2>Push/pull</h2>
+<p>Send commits to and from github</p>
+<pre><code>                               push
+                           -----------&gt;
+          your computer                    github
+                           &lt;-----------
+                               pull</code></pre>
+</section>
 <section id="git-1" class="slide level2">
 <h2>Git</h2>
 <ul>
@@ -317,7 +332,6 @@ $ git push</code></pre>
 <li>Use <code>git log</code> to see commits</li>
 <li>Can switch to old commits (<code>git checkout ab1234</code>)</li>
 <li>Use <code>git checkout master</code> to get to latest commit</li>
-<li>Result is visible on Github straight away</li>
 </ul>
 </section>
 <section id="thats-all" class="slide level2">

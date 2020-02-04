@@ -245,6 +245,18 @@ $ git commit -m "Add installation instructions in README"
 ```
 
 
+Commit history
+--------------
+
+Commits represent the history of your work
+
+```
+          initial commit -- A -- B -- C -- HEAD
+```
+
+Use `git log` to see the history (or look on github)
+
+
 Committing
 ----------
 
@@ -252,7 +264,6 @@ Committing
 * Git saves the commit as a "version" of your code.
 * Can make more changes and commits after
 * Use good commit messages
-
 
 Push/pull
 ---------
@@ -272,6 +283,19 @@ Get changes *from* github:
 $ git pull
 ```
 
+Push/pull
+---------
+
+Send commits to and from github
+
+```
+                               push
+                           ----------->
+          your computer                    github
+                           <-----------
+                               pull
+```
+
 
 Git
 ---
@@ -280,7 +304,6 @@ Git
 * Use `git log` to see commits
 * Can switch to old commits (`git checkout ab1234`)
 * Use `git checkout master` to get to latest commit
-* Result is visible on Github straight away
 
 
 That's all
