@@ -5,4 +5,5 @@ layout: default
 FCP
 ===
 
-[Slides](slides/slides1.html)
+[Slides - week 13](slides/slides1.html)
+[Slides - week 14](slides/slides2.html)
