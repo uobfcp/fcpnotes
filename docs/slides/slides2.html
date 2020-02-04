@@ -244,6 +244,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://lkml.iu.edu/hypermail/linux/kernel/1707.3/02367.html">Rant</a></li>
 </ul>
 </section>
+<section id="github" class="slide level2">
+<h2>Github</h2>
+<ul>
+<li>Provides a remote git server for free</li>
+<li>Has a web front-end for navigating the code</li>
+<li>Makes it easy to fork and open pull requests</li>
+<li>More on this later…</li>
+</ul>
+</section>
 <section id="start-a-git-project" class="slide level2">
 <h2>Start a git project</h2>
 <ul>
@@ -286,6 +295,7 @@ $ git commit -m &quot;Add installation instructions in README&quot;</code></pre>
 <li>Always check (<code>status/diff</code>) before committing.</li>
 <li>Git saves the commit as a “version” of your code.</li>
 <li>Can make more changes and commits after</li>
+<li>Use good commit messages</li>
 </ul>
 </section>
 <section id="pushpull" class="slide level2">
@@ -295,8 +305,26 @@ $ git commit -m &quot;Add installation instructions in README&quot;</code></pre>
 <li>Use push to send them to github</li>
 </ul>
 <pre><code>$ git status   # Always check clean first
+$ git log      # What am I pushing?
 $ git push</code></pre>
-<p>Use <code>git pull</code> to get changes <em>from</em> github.</p>
+<p>Get changes <em>from</em> github:</p>
+<pre><code>$ git pull</code></pre>
+</section>
+<section id="git-1" class="slide level2">
+<h2>Git</h2>
+<ul>
+<li>Stores every commit forever</li>
+<li>Use <code>git log</code> to see commits</li>
+<li>Can switch to old commits (<code>git checkout ab1234</code>)</li>
+<li>Use <code>git checkout master</code> to get to latest commit</li>
+<li>Result is visible on Github straight away</li>
+</ul>
+</section>
+<section id="thats-all" class="slide level2">
+<h2>That’s all</h2>
+<ul>
+<li>Make sure you register for the assignment in the lab on Friday</li>
+</ul>
 </section>
     </div>
   </div>

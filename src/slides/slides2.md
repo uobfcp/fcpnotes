@@ -266,7 +266,11 @@ $ git log      # What am I pushing?
 $ git push
 ```
 
-Use `git pull` to get changes *from* github.
+Get changes *from* github:
+
+```
+$ git pull
+```
 
 
 Git
