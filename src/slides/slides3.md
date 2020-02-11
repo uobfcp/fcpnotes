@@ -60,7 +60,101 @@ You can clone a repo more than once:
 A cloned repo will be initialised with a remote repo called "origin":
 
 
+Git workflow
+------------
 
+```
+$ cd myproject
+$ git status    # check clean before starting
+<edit stuff.txt>
+
+$ git status
+$ git diff      # check changes before committing
+$ git add stuff.txt
+
+$ git status
+$ git commit -m "Explain feature X in stuff.txt"
+
+$ git status
+$ git push      # send commits to github
+```
+
+You should run `git status/diff` all the time
+
+
+Current state
+-------------
+
+Repo state is characterised by:
+
+* files -- the actual files you use and edit
+* index -- changes added but not committed
+* HEAD -- the last commit
+
+
+Demo
+----
+
+Demo of `git diff/add/commit/--cached`
+
+
+Commits
+-------
+
+* Commits are a sequence of changes of the code
+* The commit you are currently on is called HEAD.
+* Editing changes the files
+```
+Clean:
+
+A --> B --> C
+           HEAD/index/files
+
+
+After editing:
+
+A --> B --> C
+           HEAD/index --> files
+```
+
+Adding
+------
+
+* `git add` copies changes from files to index.
+* Afterwards index and files are the same.
+
+```
+Before:
+
+A --> B --> C
+           HEAD/index --> files
+
+
+After git add:
+
+A --> B --> C
+           HEAD --> index/files
+```
+
+Committing
+----------
+
+* `git commit` makes the index a new commit.
+* HEAD is advanced to that commit.
+* Afterwards index and HEAD are the same.
+
+```
+Before:
+
+A --> B --> C
+           HEAD --> index/files
+
+
+After git commit:
+
+A --> B --> C --> D
+                 HEAD/index/files
+```
 
 That is all
 -----------
