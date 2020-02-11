@@ -156,7 +156,89 @@ A --> B --> C --> D
                  HEAD/index/files
 ```
 
+Pushing
+-------
+
+* `git push` sends commits to origin
+
+```
+Before:
+
+         origin/HEAD
+A --> B ----> C -----> D
+                      HEAD
+
+
+After git push:
+
+                  origin/HEAD
+A --> B ----> C -----> D
+                      HEAD
+```
+
+Pulling
+-------
+
+* `git pull` receives commits from origin
+
+```
+Before:
+
+                      origin/HEAD
+A --> B --> C --> D ----> E
+                 HEAD
+
+
+After git push:
+
+                      origin/HEAD
+A --> B --> C --> D ----> E
+                         HEAD
+```
+
+Modules
+-------
+
+Put code in .py files and import them.
+
+Multiple .py files can import from each other.
+
+```python
+# stuff.py
+
+def random():
+    return 42
+```
+
+```python
+# otherstuff.py
+
+from stuff import random
+
+random()
+```
+
+Packages
+--------
+
+A directory with an `__init__.py` is called a "package":
+```
+mystuff/
+    __init__.py
+    superstuff.py
+script.py
+```
+
+```python
+# script.py
+
+from mystuff.superstuff import random
+
+print(random())
+```
+
+
 That is all
 -----------
 
-* Make sure you register for the assignment in the lab on Friday
+* Try to finish the assignment in the lab on Friday
