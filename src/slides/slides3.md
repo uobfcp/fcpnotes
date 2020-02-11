@@ -189,7 +189,7 @@ A --> B --> C --> D ----> E
                  HEAD
 
 
-After git push:
+After git pull:
 
                       origin/HEAD
 A --> B --> C --> D ----> E
