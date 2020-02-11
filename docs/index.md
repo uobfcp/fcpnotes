@@ -24,3 +24,5 @@ Look up terminal commands in the [cheat sheet](shell.html)
 [Slides - week 13](slides/slides1.html)
 
 [Slides - week 14](slides/slides2.html)
+
+[Slides - week 15](slides/slides3.html)
