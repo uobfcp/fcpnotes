@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Oscar Benjamin" />
+  <title>EMAT10006 - Further Computer Programming - EMAT10006 - FCP - Lecture 03</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">EMAT10006 - Further Computer Programming</h1>
+    <h2 class="author">Oscar Benjamin</h2>
+    <h3 class="date">Week 15</h3>
+</section>
+
+<section id="today-week-15" class="slide level2">
+<h1>Today (week 15)</h1>
+<ul>
+<li>Assignment due on Tuesday</li>
+<li>Git/github repos and workflow</li>
+<li>Python modules and packages</li>
+</ul>
+</section>
+<section id="assignment" class="slide level2">
+<h1>Assignment</h1>
+<p>Register for the assignment!</p>
+</section>
+<section id="git-repos" class="slide level2">
+<h1>Git repos</h1>
+<ul>
+<li>A git repository is just a directory containing a <code>.git</code> directory.</li>
+<li>The .git directory contains all the commits and other stuff.</li>
+<li>The other files are the working tree.</li>
+</ul>
+<p>Create a local repo</p>
+<pre class="shell"><code>$ mkdir myproject
+$ cd myproject
+$ git init
+Initialized empty Git repository in
+~/myproject/.git/</code></pre>
+</section>
+<section id="connecting-repos" class="slide level2">
+<h1>Connecting repos</h1>
+<ul>
+<li>Normal way is to create a repo on Github</li>
+<li>You &quot;clone&quot; the repo creating a local repo on your computer</li>
+<li>Can clone many times to create multiple repos</li>
+</ul>
+<p>Create on Github and clone</p>
+<pre class="shell"><code>&lt;create on github and copy URL&gt;
+$ git clone https://github.com/myname/myproject.git
+$ cd myproject</code></pre>
+</section>
+<section id="multiple-repos" class="slide level2">
+<h1>Multiple repos</h1>
+<p>You can clone a repo more than once:</p>
+<pre><code>                    github repo
+                   /           \
+          laptop repo         desktop repo</code></pre>
+<p>A cloned repo will be initialised with a remote repo called &quot;origin&quot;:</p>
+</section>
+<section id="that-is-all" class="slide level2">
+<h1>That is all</h1>
+<ul>
+<li>Make sure you register for the assignment in the lab on Friday</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
